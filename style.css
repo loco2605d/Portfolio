@@ -1,7 +1,8 @@
 body{
   width:100%;
-  background-color:  darkcyan;
+  background-color: #F5F7FA ;
   border: 5px black;
+  font-family: 'Inter', sans-serif;
 }
 header{
   background-color:#F5F7FA;
@@ -10,6 +11,7 @@ header{
   height:205px;
   line-height: 0.5;
   text-align:  start;
+  border:5px solid #F5F7FA;
 }
 header>h6{
   line-height:0.5px;
@@ -38,36 +40,148 @@ body>h2{
   text-decoration: none;
   border-radius: 20px;
   position:absolute;
-  left:30px;
+  left:35px;
   top:175px;
+  transition:all 0.3s ease;
+}
+.button:hover{
+  filter: drop-shadow(0 0 10px #fffdef);
+  background-color: #2a2a2a;
+  color: #ffffff;
 }
 /*Footer*/
 li{
   list-style-type:none;
   display:inline;
-  
+  gap:10px;
+  padding:10px
 }
 footer{
-  padding: 4px 5px 0.5px 8px;
+  padding: 2px 5px 15px 8px;
   background-color:  aqua;
   width:100%;
   line-height: 0.25;
   color:#1A1A1B;
   border-radius: 5px;
 }
-li a{
-  text-decoration: none;
-  text-align:  end;
-  color:#1A1A1B;
+.link {
+    text-decoration: none;
+    color: #333; 
+    transition: all 0.3s ease;
+    display: inline-block;
+    align-items: center;
+    gap: 8px;
 }
+.link:hover {
+    color: #0077b5; 
+    transform: translateY(-10px);
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 ul{
-  text-align:  end;
-  ;
-}
-footer h6{
-  text-align: end;
-  color:#1A1A1B;
+  text-align: start;
+  
 }
 footer h3{
   font-size: 20px;
+}
+
+
+
+/*-------Body-------*/
+.container>div{
+  display:flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap:8px;
+  
+}
+.container p{
+  flex:1;
+  margin:5px;
+}
+.container img {
+    width: 160px !important;  /* Fixed width like the image */
+    height: 120px !important;   /* Fixed height to create the rectangle look */
+    border-radius: 12px;       /* Rounded corners */
+    object-fit: cover;         /* Keeps image from looking squished */
+    flex-shrink: 0;            /* Prevents the image from shrinking */
+}
+p span{
+  font-size:  18px;
+  font-weight:  bolder;
+  color:#1A1A1B;
+  
+}
+.container img:hover{
+  transform:scale(1.1);
+}
+
+.stars {
+    margin-right: 5px;
+    transition: all 0.3s ease;
+    color: #ffd700;
+}
+
+
+.button {
+    position: absolute;
+    display: inline-block;
+    height: 30px;
+    width: 140px; /* Slightly wider to fit stars */
+    line-height: 30px;
+    text-align: center;
+    background-color: #1A1A1B;
+    color: aliceblue;
+    text-decoration: none;
+    border-radius: 20px;
+    left: 35px;
+    top: 175px;
+    transition: all 0.3s ease;
+}
+
+.star-icon {
+    position: absolute;
+    opacity: 0;
+    color:  cornflowerblue;
+    transition: all 0.4s ease;
+    font-size: 10px;
+}
+
+.s1 { top: -10px; left: 10px; }
+.s2 { top: 15px; left: -15px; }
+.s3 { top: -5px; right: 5px; }
+
+
+.button:hover .star-icon {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px pink) drop-shadow(0 0 15px #00eaff);
+    transform: scale(1.7) rotate(15deg);
+}
+
+.button:hover {
+  color: black;
+    background-color:  aqua;
+}
+
+
+
+/*Disclaimer*/
+
+.dis{
+  width:100%;
+  height:80px;
+  padding-top:30px;
+  color:black;
+  background-color:#f4f4f4;
+  position:relative;
+}
+.last{
+  font-size: 15px;
+  font-weight:  bold;
+  
+}
+#copy {
+  display: block;
+  text-align:  right;
 }
